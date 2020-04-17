@@ -28,3 +28,60 @@ func binarySearch<T: Comparable>(_ a: [T], key: T, range: Range<Int>) -> Int? {
 Вы можете использовать пользовательские объекты в качестве ключей в словаре, но есть два момента: 
 - Ключи должны соответствовать NSCopying протоколу.
 - Ключи должны реализовать hash и isEqual: методы, потому что словарь использует хэш-таблицу, чтобы организовать его хранение и быстрый доступ к содержащимся объектам.
+
+### Какие типы хранилищ core data доступны "из коробки" для ios
+- XML
+- In-Memory
+- SQLite
+- Binary
+
+### По умолчанию @property объявляются со следующим атрибутом атомарности
+Дефолтное значение атомарности atomic
+
+### Что выведется в лог
+```objective-c
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    __block int count = 0;
+    void (^countBlock)() = ^() {
+        NSLog(@"%d", count);
+    };
+    
+    count++;
+    NSLog(@"%d", count);
+    countBlock();
+}
+```
+В лог выведется 1, 1
+
+### Что выведется в лог
+```objective-c
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    dispatch_async(dispatch_get_main_queue(), ^
+    {
+        NSLog(@"A");
+        dispatch_async(dispatch_get_main_queue(), ^
+        {
+            NSLog(@"B");
+        });
+        NSLog(@"C");
+    });
+    NSLog(@"D");
+}
+```
+В лог выведется D A C B
+
+
+
+
+
+
+
+
+
+
+
+
