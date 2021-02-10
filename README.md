@@ -21,7 +21,32 @@ func binarySearch<T: Comparable>(_ a: [T], key: T, range: Range<Int>) -> Int? {
 }
 ```
 
+### Стэк
+Стек (от англ. stack — стопка) — структура данных, представляющая из себя упорядоченный набор элементов, в которой добавление новых элементов и удаление существующих производится с одного конца, называемого вершиной стека. Притом первым из стека удаляется элемент, который был помещен туда последним, то есть в стеке реализуется стратегия «последним вошел — первым вышел» (last-in, first-out — LIFO). 
 
+```swift
+public struct Stack<T> {
+  fileprivate var array = [T]()
+
+  public var isEmpty: Bool {
+    return array.isEmpty
+  }
+
+  public var count: Int {
+    return array.count
+  }
+  
+  /// Добовляем элемент
+  public mutating func push(_ element: T) {
+    array.append(element)
+  }
+  
+  /// Возвращает последний элемент и сразу удаляет его
+  public mutating func pop() -> T? {
+    return array.popLast()
+  }
+}
+```
 
 
 
