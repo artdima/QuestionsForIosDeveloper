@@ -1,6 +1,6 @@
 ## The algorithms
 
-### Сортировка вставки
+### Сортировка вставкой
 swapAt(_:_:) - обменивает значения по указанным индексам коллекции.
 ```swift
 func insertionSort(_ array: [Int]) -> [Int] {
@@ -13,6 +13,21 @@ func insertionSort(_ array: [Int]) -> [Int] {
         }
     }
     return a
+}
+```
+
+### Quicksort(Быстрая сортировка)
+Quicksort-один из самых известных алгоритмов в истории. Он был изобретен в далеком 1959 году Тони Хоаром, в то время, когда рекурсия была еще довольно туманным понятием.
+```swift
+func quicksort<T: Comparable>(_ a: [T]) -> [T] {
+  guard a.count > 1 else { return a }
+
+  let pivot = a[a.count/2]
+  let less = a.filter { $0 < pivot }
+  let equal = a.filter { $0 == pivot }
+  let greater = a.filter { $0 > pivot }
+
+  return quicksort(less) + equal + quicksort(greater)
 }
 ```
 
