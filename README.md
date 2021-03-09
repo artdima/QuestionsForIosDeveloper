@@ -30,7 +30,7 @@ func insertionSort(_ array: [Int]) -> [Int] {
 }
 ```
 
-### Сортировка выбором
+### Selection Sort
 Работает медленно - O(n^2)
 ```swift
 func selectionSort(_ array: [Int]) -> [Int] {
@@ -55,7 +55,7 @@ func selectionSort(_ array: [Int]) -> [Int] {
 }
 ```
 
-### Quicksort(Быстрая сортировка)
+### Quicksort
 Quicksort-один из самых известных алгоритмов в истории. Он был изобретен в далеком 1959 году Тони Хоаром, в то время, когда рекурсия была еще довольно туманным понятием.
 ```swift
 func quicksort<T: Comparable>(_ a: [T]) -> [T] {
