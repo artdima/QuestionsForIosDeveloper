@@ -5,16 +5,16 @@
 - [Selection Sort](#Selection-Sort)
 - [Quicksort](#Quicksort)
 
-### Поиск
-- [Бинарный поиск](#Бинарный-поиск)
+### Searching
+- [Binary Search](#Binary-Search) Quickly find elements in a sorted array.
 
-### Структуры данных
-- [Стэк](#Стэк)
+### Queues
+- [Stack](#Stack). Last-in, first-out!
 
-### Алгоритмы
-- [Палиндромы](#Палиндромы)
+### Puzzles
+- [Finding Palindromes](#Finding-Palindromes)
 
-### Сортировка вставкой
+### Insertion Sort
 swapAt(_:_:) - обменивает значения по указанным индексам коллекции.
 ```swift
 func insertionSort(_ array: [Int]) -> [Int] {
