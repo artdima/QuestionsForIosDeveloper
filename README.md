@@ -1,9 +1,9 @@
 ## The algorithms
 
-### Сортировки
-- [Сортировка вставкой](#Сортировка-вставкой)
-- [Сортировка выбором](#Сортировка-выбором)
-- [Quicksort(Быстрая сортировка)](#Quicksort)
+### Sorting
+- [Insertion Sort](#Insertion-Sort)
+- [Selection Sort](#Selection-Sort)
+- [Quicksort](#Quicksort)
 
 ### Поиск
 - [Бинарный поиск](#Бинарный-поиск)
